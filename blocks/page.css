@@ -70,9 +70,21 @@
 
 .cards {
   /*fonts*/
+  margin-top: 30px;
+}
+.card{
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  list-style: none;
 }
 .card__list{
   display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 282px);
+  grid-gap: 20px 17px;
+  padding: 0;
+  margin: 0;
 }
 
 .card__image {
@@ -87,10 +99,53 @@
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 20px;
+  padding-right: 20px;
   align-items: center;
+  justify-content: space-between;
+}
+
+.card__title{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .card__like-button {
   background:transparent url(../images/like-inactive.svg) center no-repeat;
   width: 21px;
   height: 18px;
+}
+.footer {
+  color: #545454;
+  padding-top: 67px;
+}
+
+@media screen and (max-width:480px){
+  .profile {
+    flex-direction: column;
+  }
+
+  .profile__info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+    width: 100%;
+  }
+
+  .profile__description{
+    width: 100%;
+    text-align: center;
+  }
+  
+  .profile__edit-button{
+    margin-left: 10px;
+  }
+
+  .profile__add-button{
+    margin: 0;
+    width: 100%;
+  }
+  .footer{
+    padding-left: 19px;
+  }
 }
