@@ -10,6 +10,8 @@
     "title button"
     "description description";
   grid-template-columns: minmax(auto, 373px) auto;
+  row-gap: 7px;
+  column-gap: 18px;
 }
 .profile__edit-button {
   background: transparent url(../images/edit-icon\(pencil\).svg) center
