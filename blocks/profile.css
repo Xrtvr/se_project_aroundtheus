@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   padding: 40px 0 0;
+  margin-bottom: 51px;
 }
 
 .profile__info {
@@ -21,6 +22,8 @@
   grid-area: button;
   margin: 15px 0 9px;
   padding: 0;
+  border-color: rgba(255,255,255, 1);
+  border-width: 1px;
 }
 .profile__edit-button:hover {
   opacity: 60%;
@@ -31,6 +34,9 @@
   width: 150px;
   height: 50px;
   margin-left: auto;
+  border-color: rgba(255, 255, 255, 1);
+  border-width: 2px;
+  border-style: solid;
 }
 .profile__add-button:hover {
   opacity: 60%;

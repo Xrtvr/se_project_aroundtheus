@@ -1,7 +1,11 @@
 .header {
     margin-top: 45px;
     max-width: 880px;
+    border-bottom: 1px solid rgba(84 84 84 / .7);
   }
+.header__logo {
+  margin-bottom: 41px;
+}
   @media screen and (max-width: 320px) {
     .header{
     margin-top: 28px;

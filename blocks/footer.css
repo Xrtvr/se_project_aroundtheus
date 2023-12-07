@@ -2,3 +2,12 @@
     color: #545454;
     padding-top: 67px;
   }
+.footer__copyright {
+  margin: 0
+}
+  
+@media screen and (max-width: 480px) {
+    .footer {
+      padding-left: 19px;
+    }
+  }
