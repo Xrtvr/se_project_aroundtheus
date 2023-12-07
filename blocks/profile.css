@@ -58,3 +58,39 @@
   background-position: center;
   margin-right: 24px;
 }
+
+@media screen (max-width: 320px) {
+  .profile__image {
+    padding: 82px 42px 80px 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .profile {
+    flex-direction: column;
+  }
+
+  .profile__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+    width: 100%;
+  }
+
+  .profile__description {
+    width: 100%;
+    text-align: center;
+  }
+
+  .profile__edit-button {
+    margin-left: 10px;
+  }
+
+  .profile__add-button {
+    margin: 0;
+    width: 100%;
+  }
+  .footer {
+    padding-left: 19px;
+  }
+}

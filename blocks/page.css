@@ -14,36 +14,6 @@
   flex-direction: column;
   min-height: 100vh;
 }
- * {
+ /* * {
   outline: 1px solid red;
- }
-@media screen and (max-width:480px){
-  .profile {
-    flex-direction: column;
-  }
-
-  .profile__info{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 30px;
-    width: 100%;
-  }
-
-  .profile__description{
-    width: 100%;
-    text-align: center;
-  }
-  
-  .profile__edit-button{
-    margin-left: 10px;
-  }
-
-  .profile__add-button{
-    margin: 0;
-    width: 100%;
-  }
-  .footer{
-    padding-left: 19px;
-  }
-}
+ } */
