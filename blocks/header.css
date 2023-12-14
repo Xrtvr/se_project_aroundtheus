@@ -12,4 +12,11 @@
     max-width: 320px;
     max-height: 56px;
   }
+  .header__logo {
+    max-width: 126px;
+    max-height: 24px;
+    padding-left: 27px;
+    padding-bottom: 32px;
+    margin: 0;
+  }
   }
