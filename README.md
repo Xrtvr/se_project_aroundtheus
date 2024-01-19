@@ -8,6 +8,9 @@ The Intention for this project is to portray how the elements of the website wil
 -Responsive design
 -CSS media quieres
 
+## Project Website
+https://xrtvr.github.io/se_project_aroundtheus/
+
 ## Figma
 [Link to the project on Figma](https://www.figma.com/file/Es8zZP3ARGH9JGcw60i3OD/Sprint-3_-Around-the-US?type=design&node-id=0%3A1&mode=design&t=EfVpDga9MFR5QfmQ-1)
 
