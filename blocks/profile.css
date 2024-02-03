@@ -70,9 +70,16 @@
   margin-right: 24px;
 }
 
-@media screen (max-width: 320px) {
+@media screen and (max-width: 320px) {
   .profile__image {
-    padding: 82px 42px 80px 30px;
+    margin-right: 0px;
+  }
+  .profile__title {
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+  .profile__add-button {
+    width: 282px;
   }
 }
 @media screen and (max-width: 480px) {
