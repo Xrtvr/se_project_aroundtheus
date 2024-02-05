@@ -1,8 +1,8 @@
 .footer {
-   padding-top: 67px;
-   padding-bottom: 60px;
-   margin-right: auto;
-  }
+  padding-top: 67px;
+  padding-bottom: 60px;
+  margin-right: auto;
+}
 .footer__copyright {
   color: #545454;
   margin: 0;
@@ -12,19 +12,23 @@
   line-height: 1.2;
   text-align: left;
 }
-  
+
 @media screen and (max-width: 480px) {
-    .footer {
-      padding-left: 19px;
-      max-width: 480px;
-    }
+  .footer {
+    padding-left: 19px;
+    max-width: 480px;
   }
+}
 @media screen and (max-width: 320px) {
-    .footer__copyright {
-      padding-left: auto;
-      font-size: 14px;
-    }
-    .footer {
-      max-width: 320px;
-    }
+  .footer__copyright {
+    padding-left: auto;
+    font-size: 14px;
+    max-width: 282px;
+  }
+  .footer {
+    max-width: 320px;
+    padding-top: 48px;
+    padding-bottom: 36px;
+    padding-right: 19px;
+  }
 }
