@@ -24,6 +24,7 @@
   padding: 0;
   border-color: rgba(255, 255, 255, 1);
   border-width: 1px;
+  border-style: solid;
 }
 .profile__edit-button:hover {
   opacity: 60%;
@@ -60,6 +61,10 @@
   font-weight: 400;
   grid-area: description;
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 282px;
 }
 .profile__image {
   height: 120px;
@@ -84,7 +89,7 @@
   .profile__title {
     overflow: hidden;
     word-wrap: break-word;
-    width: 196px;
+    max-width: 196px;
   }
   .profile__description {
     max-width: 282px;
@@ -112,7 +117,7 @@
   .profile__title {
     font-size: 22px;
     line-height: 26.63px;
-    width: 196px;
+    max-width: 196px;
     margin-bottom: 0;
   }
 
