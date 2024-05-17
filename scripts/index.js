@@ -36,6 +36,7 @@ const profileTitleInput = document.querySelector("#profile-title-input");
 const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
+const profileEditForm = profileEditModal.querySelector(".modal__form");
 
 profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
@@ -45,4 +46,8 @@ profileEditButton.addEventListener("click", () => {
 
 profileEditCloseButton.addEventListener("click", () => {
   profileEditModal.classList.remove("modal_opened");
+});
+
+profileEditForm.addEventListener("submit", () => {
+  console.log("form submitted");
 });
