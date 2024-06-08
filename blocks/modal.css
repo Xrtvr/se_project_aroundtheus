@@ -22,7 +22,7 @@
   max-height: 330px;
 }
 
-.modal__opened {
+.modal_opened {
   display: flex;
 }
 
