@@ -89,4 +89,33 @@ input:last-of-type {
     bottom: 13.62px;
     right: 18.62px;
   }
+
+  .modal__container {
+    position: relative;
+    max-width: 282px;
+    max-height: 322px;
+    margin: auto;
+    padding: 22px;
+  }
+  .modal__heading {
+    max-width: 238px;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21.78px;
+  }
+  .modal__form {
+    margin-top: 75px;
+  }
+  .modal__input {
+    max-width: 238px;
+  }
+  .modal__button {
+    font-weight: 400;
+    max-width: 238px;
+    line-height: 16.94px;
+    font-size: 14px;
+  }
+  .modal__close {
+    position: absolute;
+  }
 }
