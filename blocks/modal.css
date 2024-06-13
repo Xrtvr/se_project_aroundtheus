@@ -91,7 +91,6 @@ input:last-of-type {
     margin: auto;
     padding: 22px;
     box-sizing: border-box;
-    overflow: hidden;
   }
   .modal__heading {
     max-width: 238px;
@@ -112,8 +111,8 @@ input:last-of-type {
     font-size: 14px;
   }
   .modal__close {
-    bottom: calc(100% + 5px);
-    left: calc(100% + 5px);
+    bottom: calc(100% + 20px);
+    left: calc(100% - 30px);
     width: 26px;
     height: 26px;
   }
