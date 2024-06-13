@@ -84,18 +84,14 @@ input:last-of-type {
   }
 }
 @media screen and (max-width: 320px) {
-  .modal__close {
-    position: absolute;
-    bottom: 13.62px;
-    right: 18.62px;
-  }
-
   .modal__container {
     position: relative;
     max-width: 282px;
     max-height: 322px;
     margin: auto;
     padding: 22px;
+    box-sizing: border-box;
+    overflow: hidden;
   }
   .modal__heading {
     max-width: 238px;
@@ -116,6 +112,9 @@ input:last-of-type {
     font-size: 14px;
   }
   .modal__close {
-    position: absolute;
+    bottom: calc(100% + 5px);
+    left: calc(100% + 5px);
+    width: 26px;
+    height: 26px;
   }
 }
