@@ -68,9 +68,9 @@ function closePopup(modal) {
 function openModal(modal) {
   modal.classList.add("modal_opened");
 }
-function renderCard(CardData, wrapper) {
+function renderCard(CardData, cardListEl) {
   const cardElement = getCardElement(cardData);
-  wrapper.prepend(cardElement);
+  cardListEl.prepend(cardElement);
 }
 
 function handleProfileFormSubmit(e) {
@@ -102,6 +102,11 @@ function getCardElement(cardData) {
   cardImageEl.alt = cardData.name;
   cardTitleEl.textContent = cardData.name;
   return cardElement;
+}
+
+function renderCard(cardData, cardListEl) {
+  const cardElement = getCardElement(cardData);
+  cardListEl.prepend(cardElement);
 }
 /*Event Handlers*/
 
