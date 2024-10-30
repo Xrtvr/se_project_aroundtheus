@@ -77,7 +77,7 @@ function handleProfileFormSubmit(e) {
   e.preventDefault();
   profileTitle.textContent = nameInput.value;
   profileDescription.textContent = jobInput.value;
-  closeModal(profileEditModal);
+  closePopup(profileEditModal);
 }
 
 function handleAddCardFormSubmit(e) {
@@ -85,7 +85,7 @@ function handleAddCardFormSubmit(e) {
   const name = cardTitleInput.value;
   const link = cardUrlInput.value;
   renderCard({ name, link }, cardListEl);
-  closeModal(addCardModal);
+  closePopup(addCardModal);
 }
 
 function getCardElement(cardData) {
@@ -124,7 +124,7 @@ addCardFormEl.addEventListener("submit", handleAddCardFormSubmit);
 profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
-  openModal(editProfileModal);
+  openModal(profileEditModalModal);
   // "//"
   profileEditModal.classList.add("modal_opened");
 });
@@ -154,7 +154,7 @@ initialCards.reverse().forEach((cardData) => {
 
 /*for loop that inserts a card
 for (let i = 0; i < initialCards.length; i++) {
-  cardsWrap.prepend(getCardElement(initialCards[i]));
+  .prepend(getCardElement(initialCards[i]));
 } */
 
 initialCards.forEach((cardData) => {
