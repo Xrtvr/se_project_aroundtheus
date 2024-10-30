@@ -51,20 +51,10 @@ const cardTitleInput = addCardFormEl.querySelector(".modal__input_type_title");
 const cardUrlInput = addCardFormEl.querySelector(".modal__input_type_name");
 /*Functions*/
 
-// function closePopup() {
-//   profileEditModal.classList.remove("modal_opened");
-// }
-
 function closePopup(modal) {
   modal.classList.remove("modal_opened");
 }
 
-// function openModal() {
-//  nameInput.value = profileTitle.textContent;
-//  jobInput.value = profileDescription.textContent;
-
-//   profileEditModal.classList.add("modal_opened");
-// }
 function openModal(modal) {
   modal.classList.add("modal_opened");
 }
@@ -125,37 +115,18 @@ profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
   openModal(profileEditModal);
-  // "//"
   profileEditModal.classList.add("modal_opened");
 });
-
-/* profileEditButton.addEventListener("click", () => {
-   nameInput.value = profileTitle.textContent;
-   jobInput.value = profileDescription.textContent;
-
-   closePopup(profileEditModal);
- }); */
 
 profileModalCloseButton.addEventListener("click", () =>
   closePopup(profileEditModal)
 );
 
 /* add new card */
-addNewCardButton.addEventListener("click", () => closePopup(addCardModal));
+addNewCardButton.addEventListener("click", () => openModal(addCardModal));
 addCardModalCloseButton.addEventListener("click", () =>
   closePopup(addCardModal)
 );
-
-/*got this from and earlier video---
-initialCards.reverse().forEach((cardData) => {
-  const cardElement = getCardElement(cardData);
-  cardListEl.prepend(cardElement);
-});*/
-
-/*for loop that inserts a card
-for (let i = 0; i < initialCards.length; i++) {
-  .prepend(getCardElement(initialCards[i]));
-} */
 
 initialCards.forEach((cardData) => {
   renderCard(cardData, cardListEl);
