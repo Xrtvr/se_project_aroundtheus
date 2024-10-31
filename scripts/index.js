@@ -50,6 +50,9 @@ const cardTemplate =
 const cardTitleInput = addCardFormEl.querySelector(".modal__input_type_title");
 const cardUrlInput = addCardFormEl.querySelector(".modal__input_type_url");
 
+const imageModalWindow = document.querySelector("#image-modal");
+const imageEl = imageModalWindow.querySelector(".modal__image");
+const imageCaption = imageModalWindow.querySelector(".modal__caption");
 /*Functions*/
 
 function closePopup(modal) {
@@ -88,6 +91,9 @@ function getCardElement(cardData) {
   likeButton.addEventListener("click", () => {
     likeButton.classList.toggle("card__like-button_active");
   });
+  cardImageEl.addEventListener("click", () => {
+    handlePreviewImage(cardData);
+  });
 
   cardImageEl.src = cardData.link;
   cardImageEl.alt = cardData.name;
@@ -98,6 +104,13 @@ function getCardElement(cardData) {
 function renderCard(cardData, cardListEl) {
   const cardElement = getCardElement(cardData);
   cardListEl.prepend(cardElement);
+}
+
+function handlePreviewImage(data) {
+  imageEl.src = data.link;
+  imageEl.alt = data.name;
+  imageCaption.textContent = data.name;
+  openModal(imageModalWindow);
 }
 /*Event Handlers*/
 
