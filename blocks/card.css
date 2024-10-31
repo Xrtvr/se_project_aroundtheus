@@ -47,3 +47,18 @@
   opacity: 50%;
   cursor: pointer;
 }
+
+/* Delete Button Styling 
+.card__delete-button {
+  position: absolute;
+  top: 1019px;
+  left: 189px;
+  width: 18px;
+  height: 19.3px;
+  background: url(../images/Trash.svg) no-repeat center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+*/

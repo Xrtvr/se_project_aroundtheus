@@ -48,7 +48,8 @@ const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
 
 const cardTitleInput = addCardFormEl.querySelector(".modal__input_type_title");
-const cardUrlInput = addCardFormEl.querySelector(".modal__input_type_name");
+const cardUrlInput = addCardFormEl.querySelector(".modal__input_type_url");
+
 /*Functions*/
 
 function closePopup(modal) {
