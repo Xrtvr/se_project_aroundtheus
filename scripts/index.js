@@ -72,8 +72,8 @@ function renderCard(cardData, cardListEl) {
 
 function handleProfileFormSubmit(e) {
   e.preventDefault();
-  profileTitle.textContent = nameInput.value;
-  profileDescription.textContent = jobInput.value;
+  profileTitle.textContent = profileTitleInput.value;
+  profileDescription.textContent = profileDescriptionInput.value;
   closePopup(profileEditModal);
 }
 
