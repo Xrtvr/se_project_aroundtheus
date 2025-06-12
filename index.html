@@ -57,6 +57,9 @@
             id="profile-title-input"
             placeholder="Name"
             type="text"
+            minlength="2"
+            maxlength="40"
+            required
           />
           <input
             class="modal__input"
@@ -78,6 +81,7 @@
         <form class="modal__form" id="add-card-form">
           <input
             class="modal__input modal__input_type_title"
+            id="card-name"
             name="title"
             placeholder="Title"
             type="text"

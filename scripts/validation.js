@@ -1,35 +1,44 @@
 //enabling validation by calling enableValidation()
 // pass all the settings on call
+function showInputError() {}
 
-function setEventListeners(formEl, options) {
-  const {inputSelector} = options;
-  const inputEls = [...formEl.querySelectorAll(inputSelector)]
-  inputEls.forEach(inputEl => {
-    inputEl.addEventListener("input", (inputEl) => {
-//vid time 14:55
-    })
-  })
+function checkInputValidity(formEl, inputEl, options) {
+  if (!inputEl.validity.valid) {
+    showInputError(formEl, inputEl, options);
+  } else {
+    hideInputError();
+  }
 }
 
-function enableValidation(formEl, options) {
-  const formEls = (...document.querySelectorAll(options.formSelector));
-  formEls.forEach((formEl) => {
-    formEl.addEventListener("submit",(e) => {
-      e.preventDefault();
+function setEventListeners(formEl, options) {
+  const { inputSelector } = options;
+  const inputEls = [...formEl.querySelectorAll(inputSelector)];
+  inputEls.forEach((inputEl) => {
+    inputEl.addEventListener("input", (e) => {
+      checkInputValidity(formEl, inputEl, options);
+    });
   });
+}
 
-  setEventListeners(formEl, options);
-  // look for all inputs inside of form 
-  // loop through all the inputs to see if all are valid
+function enableValidation(options) {
+  const formEls = [...document.querySelectorAll(options.formSelector)];
+  formEls.forEach((formEl) => {
+    formEl.addEventListener("submit", (e) => {
+      e.preventDefault();
+    });
+
+    setEventListeners(formEl, options);
+    // look for all inputs inside of form
+    // loop through all the inputs to see if all are valid
     //if input is not valid
     // get validation message
-      // add error class to input
-      // display error message
-      //disable button
+    // add error class to input
+    // display error message
+    //disable button
     // if all inputs are valid
-      // enable button
-      //reset error messages
-});
+    // enable button
+    //reset error messages
+  });
 }
 const config = {
   formSelector: ".modal__form",
@@ -40,36 +49,3 @@ const config = {
   errorClass: "popup__error_visible",
 };
 enableValidation(config);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
