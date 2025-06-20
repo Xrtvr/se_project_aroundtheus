@@ -1,12 +1,18 @@
 //enabling validation by calling enableValidation()
 // pass all the settings on call
-function showInputError() {}
+
+function showInputError(formEl, inputEl, { inputErrorClass }) {
+  const errorMessageEl = formEl.querySelector(`#${inputEl.id}-error`);
+  inputEl.classList.add(inputErrorClass);
+  errorMessageEl, (textContent = inputEl.validationMessage);
+  errorMessageEl;
+}
 
 function checkInputValidity(formEl, inputEl, options) {
   if (!inputEl.validity.valid) {
     showInputError(formEl, inputEl, options);
   } else {
-    hideInputError();
+    hideInputError(formEl, inputEl, options);
   }
 }
 

@@ -51,23 +51,32 @@
         <button class="modal__close" type="button"></button>
         <h3 class="modal__heading">Edit Profile</h3>
         <form class="modal__form js-modal-form">
-          <input
-            class="modal__input"
-            name="title"
-            id="profile-title-input"
-            placeholder="Name"
-            type="text"
-            minlength="2"
-            maxlength="40"
-            required
-          />
-          <input
-            class="modal__input"
-            name="description"
-            id="profile-description-input"
-            placeholder="Description"
-            type="text"
-          />
+          <label class="modal__label">
+            <input
+              class="modal__input modal__input_type_name"
+              name="name"
+              id="owner-name"
+              placeholder="Name"
+              type="text"
+              minlength="2"
+              maxlength="40"
+              required
+            />
+            <span class="modal__error" id="owner-name-error"></span>
+          </label>
+          <label class="modal__label">
+            <input
+              class="modal__input modal_input_type_description"
+              name="description"
+              id="profile-description-input"
+              placeholder="description"
+              type="text"
+              minlength="2"
+              maxlength="200"
+              required
+            />
+            <span class="modal__error" id="owner-description-error"></span>
+          </label>
           <button class="button modal__button" type="submit">Save</button>
         </form>
       </div>
