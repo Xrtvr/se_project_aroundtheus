@@ -68,6 +68,16 @@ const imageModalCloseButton = imageModalWindow.querySelector(".modal__close");
 function openModal(modal) {
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", handleEscClose);
+
+  const form = modal.querySelector('.modal__form');
+  if (form) {
+    resetValidation(form, config);
+
+    // Only reset form fields for non-edit modals
+    if (modal.id === "add-card-modal") {
+      form.reset();
+    }
+  }
 }
 
 function closePopup(modal) {

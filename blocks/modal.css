@@ -48,7 +48,6 @@
 }
 
 .modal__content_image {
-
   margin: auto;
   position: relative;
 }
@@ -59,6 +58,22 @@
 .modal__caption {
   margin: 0;
   margin-top: 10px;
+}
+
+.modal__input_type_error {
+  border: 1px solid red;
+}
+
+.modal__error_visible {
+  color: red;
+  font-size: 12px;
+  line-height: 1.2;
+  margin-top: 5px;
+  display: block;
+}
+.modal__error {
+  display: none;
+  height: 12px;
 }
 
 input {

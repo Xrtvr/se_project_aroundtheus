@@ -70,3 +70,14 @@ const config = {
 };
 
 enableValidation(config);
+
+function resetValidation(formEl, options) {
+  const inputEls = Array.from(formEl.querySelectorAll(options.inputSelector));
+  const submitButton = formEl.querySelector(options.submitButtonSelector);
+
+  inputEls.forEach((inputEl) => {
+    hideInputError(formEl, inputEl, options);
+  });
+
+  toggleButtonState(inputEls, submitButton, options);
+}
