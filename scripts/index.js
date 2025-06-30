@@ -49,6 +49,7 @@ const profileTitleInput = document.querySelector("#profile-title-input");
 const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
+
 const profileFormEl = profileEditModal.querySelector(".modal__form");
 const addCardFormEl = addCardModal.querySelector(".modal__form");
 const cardListEl = document.querySelector(".cards__list");
@@ -69,7 +70,7 @@ function openModal(modal) {
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", handleEscClose);
 
-  const form = modal.querySelector('.modal__form');
+  const form = modal.querySelector(".modal__form");
   if (form) {
     resetValidation(form, config);
 
@@ -164,8 +165,10 @@ function handlePreviewImage(data) {
 
 // Open Edit Profile Modal
 profileEditButton.addEventListener("click", () => {
+  console.log("Edit Profile button clicked");
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
+  openModal(profileEditModal);
 
   profileFormEl.reset();
   const submitBtn = profileFormEl.querySelector(
@@ -173,8 +176,6 @@ profileEditButton.addEventListener("click", () => {
   );
   submitBtn.disabled = true;
   submitBtn.classList.add(validationConfig.inactiveButtonClass);
-
-  openModal(profileEditModal);
 });
 
 // Open Add Card Modal
@@ -187,7 +188,7 @@ addNewCardButton.addEventListener("click", () => {
   submitBtn.classList.add(validationConfig.inactiveButtonClass);
 
   openModal(addCardModal);
-)
+});
 
 // Close buttons
 profileModalCloseButton.addEventListener("click", () =>
