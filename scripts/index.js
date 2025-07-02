@@ -174,7 +174,6 @@ profileEditButton.addEventListener("click", () => {
   const submitBtn = profileFormEl.querySelector(
     validationConfig.submitButtonSelector
   );
-  submitBtn.disabled = true;
   submitBtn.classList.add(validationConfig.inactiveButtonClass);
 });
 
@@ -184,7 +183,6 @@ addNewCardButton.addEventListener("click", () => {
   const submitBtn = addCardFormEl.querySelector(
     validationConfig.submitButtonSelector
   );
-  submitBtn.disabled = true;
   submitBtn.classList.add(validationConfig.inactiveButtonClass);
 
   openModal(addCardModal);

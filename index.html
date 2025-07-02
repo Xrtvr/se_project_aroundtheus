@@ -62,11 +62,11 @@
               maxlength="40"
               required
             />
-            <span class="modal__error" id="owner-name-error"></span>
+            <span class="modal__error" id="profile-title-input-error"></span>
           </label>
           <label class="modal__label">
             <input
-              class="modal__input modal_input_type_description"
+              class="modal__input modal__input_type_description"
               name="description"
               id="profile-description-input"
               placeholder="description"
@@ -75,7 +75,10 @@
               maxlength="200"
               required
             />
-            <span class="modal__error" id="owner-description-error"></span>
+            <span
+              class="modal__error"
+              id="profile-description-input-error"
+            ></span>
           </label>
           <button class="button modal__button" type="submit">Save</button>
         </form>
@@ -88,23 +91,33 @@
         <button class="modal__close" type="button"></button>
         <h3 class="modal__heading">New Place</h3>
         <form class="modal__form" id="add-card-form">
-          <input
-            class="modal__input modal__input_type_title"
-            id="card-name"
-            name="title"
-            placeholder="Title"
-            type="text"
-          />
-          <input
-            class="modal__input modal__input_type_url"
-            name="description"
-            placeholder="Image URL"
-            type="text"
-          />
+          <label class="modal__label">
+            <input
+              class="modal__input modal__input_type_title"
+              id="card-name"
+              name="title"
+              placeholder="Title"
+              type="text"
+              minlength="2"
+              maxlength="30"
+              required
+            />
+            <span class="modal__error" id="card-name-error"></span>
+          </label>
+          <label class="modal__label">
+            <input
+              class="modal__input modal__input_type_url"
+              id="card-url-input"
+              name="url"
+              placeholder="Image URL"
+              type="url"
+              required
+            />
+            <span class="modal__error" id="card-url-input-error"></span>
+          </label>
           <button
             class="button modal__button modal__button_disabled"
             type="submit"
-            disabled
           >
             Save
           </button>
