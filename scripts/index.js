@@ -70,15 +70,10 @@ function openModal(modal) {
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", handleEscClose);
 
-  const form = modal.querySelector(".modal__form");
-  if (form) {
-    resetValidation(form, config);
-
-    // Only reset form fields for non-edit modals
-    if (modal.id === "add-card-modal") {
-      form.reset();
-    }
-  }
+  // const form = modal.querySelector(".modal__form");
+  // if (form) {
+  //   resetValidation(form, validationConfig);
+  // }
 }
 
 function closePopup(modal) {
@@ -118,6 +113,7 @@ function handleAddCardFormSubmit(e) {
   renderCard({ name, link }, cardListEl);
   closePopup(addCardModal);
   addCardFormEl.reset();
+  resetValidation(addCardFormEl, validationConfig);
 }
 
 function handleCardDelete(e) {
@@ -170,7 +166,6 @@ profileEditButton.addEventListener("click", () => {
   profileDescriptionInput.value = profileDescription.textContent;
   openModal(profileEditModal);
 
-  profileFormEl.reset();
   const submitBtn = profileFormEl.querySelector(
     validationConfig.submitButtonSelector
   );
@@ -179,7 +174,6 @@ profileEditButton.addEventListener("click", () => {
 
 // Open Add Card Modal
 addNewCardButton.addEventListener("click", () => {
-  addCardFormEl.reset();
   const submitBtn = addCardFormEl.querySelector(
     validationConfig.submitButtonSelector
   );
