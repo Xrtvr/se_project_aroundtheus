@@ -161,7 +161,7 @@ function handlePreviewImage(data) {
 
 // Open Edit Profile Modal
 profileEditButton.addEventListener("click", () => {
-  console.log("Edit Profile button clicked");
+  // console.log("Edit Profile button clicked");
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
   openModal(profileEditModal);
