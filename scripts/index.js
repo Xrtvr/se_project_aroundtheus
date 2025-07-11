@@ -93,6 +93,8 @@ function handleClickClose(e) {
     e.target.classList.contains("modal") || // overlay area
     e.target.classList.contains("modal__close") // close button
   ) {
+    const modal = e.target.closest(".modal");
+
     closePopup(modal);
   }
 }
