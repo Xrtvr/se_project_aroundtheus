@@ -79,6 +79,7 @@ function openModal(modal) {
 function closePopup(modal) {
   modal.classList.remove("modal_opened");
   document.removeEventListener("keydown", handleEscClose);
+  document.removeEventListener("mousedown", handleClickClose);
 }
 
 function handleEscClose(e) {
@@ -87,16 +88,17 @@ function handleEscClose(e) {
     if (openedModal) closePopup(openedModal);
   }
 }
+function handleClickClose(e) {
+  if (
+    e.target.classList.contains("modal") || // overlay area
+    e.target.classList.contains("modal__close") // close button
+  ) {
+    closePopup(modal);
+  }
+}
 
 function setModalEventListeners(modal) {
-  modal.addEventListener("mousedown", (e) => {
-    if (
-      e.target.classList.contains("modal") || // overlay area
-      e.target.classList.contains("modal__close") // close button
-    ) {
-      closePopup(modal);
-    }
-  });
+  modal.addEventListener("mousedown", handleClickClose);
 }
 
 function handleProfileFormSubmit(e) {
