@@ -42,9 +42,15 @@
 }
 
 .modal__form {
-  margin-top: 54px;
-  display: grid;
+  /* display: grid;
+  width: 358px;*/
+  display: flex;
+  flex-direction: column;
   width: 358px;
+  gap: 30px; /* space between inputs */
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .modal__content_image {
@@ -61,7 +67,19 @@
 }
 .modal__input {
   width: 100%;
+  height: 48px; /* Match Figma exactly */
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+  background-color: transparent;
 }
+input:focus {
+  outline: none;
+}
+
 .modal__input_type_error {
   border: 1px solid red;
 }
@@ -97,22 +115,21 @@ input:focus {
   outline: none;
 }
 
-input:last-of-type {
+/*input:last-of-type {
   margin-top: 29.75px;
-}
+}*/
 
 .modal__button {
-  margin-top: 48px;
+  height: 50px;
+  width: 100%;
+  margin-top: 30px; /* spacing from input */
   background-color: black;
   color: #fff;
-  height: 50.15px;
   font-size: 18px;
-  font-weight: 400px;
+  font-weight: 400;
   line-height: 18px;
   border-radius: 5px;
-  /*edits*/
   border: none;
-  width: 100%;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -127,7 +144,6 @@ input:last-of-type {
 }
 .modal__close {
   border: none;
-
   cursor: pointer;
   position: absolute;
   bottom: calc(100% + 5px);
