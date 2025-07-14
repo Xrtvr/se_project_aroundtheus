@@ -168,6 +168,7 @@ profileEditButton.addEventListener("click", () => {
   // console.log("Edit Profile button clicked");
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
+  resetValidation(profileFormEl, validationConfig);
   openModal(profileEditModal);
 
   const submitBtn = profileFormEl.querySelector(
